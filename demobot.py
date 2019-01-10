@@ -15,7 +15,7 @@ def ncss():
     return '<h1>NCSS Rocks!</h1>'
 
 # You can access demobot’s greet command via <your website>/greet
-@app.route('/greet')
+@app.route('/greet', methods=['GET','POST'])
 def greet_person():
     # Get the value of the 'text' query parameter
     # request.values is a dictionary (cool!)
