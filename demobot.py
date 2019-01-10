@@ -35,7 +35,8 @@ def weather():
 
 @app.route('/translate', methods=['GET','POST'])
 def translate():
-    ENtoFR = {'one':'une','two':'deux','three':'trois','four':'quatre','five':'cinq','six':'six','seven':'sept','eight':'huit','nine':'neuf','ten':'dix'}
+    ENtoFR = {'one':'une','two':'deux','three':'trois','four':'quatre','five':'cinq','six':'six','seven':'sept','eight':'huit','nine':'neuf','ten':'dix',
+    '1':'une','2':'deux','3':'trois','4':'quatre','5':'cinq','6':'six','7':'sept','8':'huit','9':'neuf','10':'dix'}
     # Get the value of the 'text' query parameter
     # request.values is a dictionary (cool!)
     word = request.values.get('text').lower()
