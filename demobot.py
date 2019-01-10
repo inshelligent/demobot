@@ -33,6 +33,15 @@ def weather():
     else:
         return f"the temperature is {temp}"
 
+@app.route('/translate')
+def translate():
+    ENtoFR = {'one':'une','two':'deux','three':'trois'}
+    # Get the value of the 'text' query parameter
+    # request.values is a dictionary (cool!)
+    word = request.values.get('text').lower()
+    # This bot translates numbers to French
+    return f'That number in French is {ENtoFR[word]}'
+
 
 if __name__ == '__main__':
     # Start the web server!
