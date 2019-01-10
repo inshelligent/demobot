@@ -21,7 +21,7 @@ def greet_person():
     # request.values is a dictionary (cool!)
     name = request.values.get('text')
     # This bot says hi to every name it gets sent!
-    return f'hi {name}!'
+    return f'Hi {name}, you are looking particularly awesome today!'
 
 @app.route('/weather')
 def weather():
