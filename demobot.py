@@ -33,7 +33,7 @@ def weather():
     else:
         return f"the temperature is {temp}"
 
-@app.route('/translate')
+@app.route('/translate', methods=['GET','POST'])
 def translate():
     ENtoFR = {'one':'une','two':'deux','three':'trois'}
     # Get the value of the 'text' query parameter
