@@ -40,7 +40,10 @@ def translate():
     # request.values is a dictionary (cool!)
     word = request.values.get('text').lower()
     # This bot translates numbers to French
-    return f'That number in French is {ENtoFR[word]}'
+    if word in ENtoFR:
+        return f'That number in French is {ENtoFR[word]}'
+    else:
+        return f"I'm sorry, I don't know that word"
 
 
 if __name__ == '__main__':
