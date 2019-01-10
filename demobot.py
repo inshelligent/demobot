@@ -42,7 +42,7 @@ def translate():
     word = request.values.get('text').lower()
     # This bot translates numbers to French
     if word in ENtoFR:
-        return f'That number in French is {ENtoFR[word]}'
+        return f'The number {word} in French is {ENtoFR[word]}'
     else:
         return f"I'm sorry, I don't know that word"
 
