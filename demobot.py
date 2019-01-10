@@ -29,7 +29,7 @@ def weather():
     temp = request.values.get('temp')
     # check to see if it is >30
     if int(temp) > 30:
-        return "It's so hot!"
+        return "It's so hot!!"
     else:
         return f"the temperature is {temp}"
 
